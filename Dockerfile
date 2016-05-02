@@ -9,6 +9,7 @@ RUN gem install rspec-puppet
 RUN gem install yaml-lint
 RUN gem install i18n -v 0.6.11
 RUN gem install actionpack -v 4.0.0
+RUN gem install activesupport -v 4.0.0
 RUN gem install rainbow -v 2.0.0
 RUN gem install rails-erb-check
 RUN gem install rails-erb-lint
