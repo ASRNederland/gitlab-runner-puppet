@@ -7,5 +7,4 @@ RUN yum update -y -q && \
 RUN gem install puppet-lint
 RUN gem install rspec-puppet
 RUN gem install yaml-lint
-RUN gem install rails-erb-check
 RUN gem install rails-erb-lint
