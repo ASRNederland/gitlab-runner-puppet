@@ -14,6 +14,7 @@ RUN yum update -y -q && \
         rubygems \
         puppet \
         git
+RUN gem install nokogiri -- --use-system-libraries
 RUN gem install \
         puppet-lint \
         rspec-puppet \
