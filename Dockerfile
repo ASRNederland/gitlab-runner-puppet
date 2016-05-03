@@ -5,6 +5,7 @@ RUN rpm -U https://yum.puppetlabs.com/puppetlabs-release-el-7.noarch.rpm
 RUN yum update -y -q && \
     yum install -y -q \
         gcc \
+        make \
         ruby \
         ruby-devel \
         zlib-devel \
