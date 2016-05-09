@@ -1,7 +1,7 @@
 FROM centos:7
 MAINTAINER Nick Hilhorst <nick.hilhorst@asr.nl>
 
-RUN rpm -U https://yum.puppetlabs.com/puppetlabs-release-el-7.noarch.rpm
+RUN rpm -U https://yum.puppetlabs.com/puppetlabs-release-pc1-el-7.noarch.rpm
 RUN yum update -y -q && \
     yum install -y -q \
         gcc \
