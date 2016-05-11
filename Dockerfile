@@ -21,4 +21,5 @@ RUN gem install \
         rspec-puppet \
         yaml-lint \
         rails-erb-check \
-        rails-erb-lint
+        rails-erb-lint \
+        ruby-lint
