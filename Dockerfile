@@ -13,7 +13,7 @@ RUN yum update -y && \
         libxml2-devel \
         rubygem-nokogiri \
         rubygems \
-        puppet-1.5.3-1.el7 \
+        puppet-agent-1.5.3-1.el7 \
         git
 RUN gem install nokogiri -- --use-system-libraries
 RUN gem install actionpack -v 4.2.7.1
