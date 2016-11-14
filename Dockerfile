@@ -2,8 +2,8 @@ FROM centos:7
 MAINTAINER Nick Hilhorst <nick.hilhorst@asr.nl>
 
 RUN yum -y install https://yum.puppetlabs.com/puppetlabs-release-pc1-el-7.noarch.rpm
-RUN yum update -y -q && \
-    yum install -y -q \
+RUN yum update -y && \
+    yum install -y \
         gcc \
         make \
         ruby \
