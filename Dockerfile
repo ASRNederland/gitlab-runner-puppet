@@ -16,10 +16,11 @@ RUN yum update -y -q && \
         puppet \
         git
 RUN gem install nokogiri -- --use-system-libraries
-RUN gem install rails-erb-lint -v 1.1.6
+RUN gem install actionpack -v 4.2.7.1
 RUN gem install \
         puppet-lint \
         rspec-puppet \
         yaml-lint \
         rails-erb-check \
+        rails-erb-lint \
         ruby-lint
