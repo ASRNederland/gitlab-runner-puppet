@@ -18,8 +18,7 @@ RUN yum update -y -q && \
 RUN gem install nokogiri -- --use-system-libraries
 RUN gem install actionpack -v 4.2.7.1
 RUN gem install activesupport -v 4.2.7.1
-RUN gem install rack -v 1.6.5
-RUN gem install \
+RUN gem install --minimal-deps \
         puppet-lint \
         rspec-puppet \
         yaml-lint \
