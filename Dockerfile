@@ -16,10 +16,10 @@ RUN yum update -y && \
         git
 RUN gem install actionpack -v 4.2.7.1
 RUN gem install activesupport -v 4.2.7.1
-RUN gem install puppet-lint -v 1.1.0
 RUN gem install --minimal-deps \
         rspec-puppet \
         yaml-lint \
+        puppet-lint \
         rails-erb-check \
         rails-erb-lint \
         ruby-lint
