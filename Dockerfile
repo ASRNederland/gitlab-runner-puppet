@@ -11,7 +11,6 @@ RUN yum update -y && \
         zlib-devel \
         libxslt-devel \
         libxml2-devel \
-        rubygem-nokogiri \
         rubygems \
         puppet-agent-1.7.1-1.el7 \
         git
