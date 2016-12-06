@@ -18,6 +18,7 @@ RUN gem install actionpack -v 4.2.7.1
 RUN gem install activesupport -v 4.2.7.1
 RUN gem install --minimal-deps \
         rake \
+        puppet \
         rspec-puppet \
         yaml-lint \
         puppet-lint \
