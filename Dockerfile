@@ -15,14 +15,15 @@ RUN yum update -y && \
         puppet-agent-1.7.1-1.el7 \
         git
 #RUN /opt/puppetlabs/puppet/bin/gem install --minimal-deps --no-ri --no-rdoc \
+
+RUN gem install actionpack -v 4.2.7.1 --no-ri --no-rdoc
+RUN gem install activesupport -v 4.2.7.1 --no-ri --no-rdoc
+
 RUN gem install --minimal-deps --no-ri --no-rdoc \
-        rake \
         yaml-lint \
         puppet-lint \
         rails-erb-check \
         rails-erb-lint \
         ruby-lint \
         rspec-puppet \
-        actionpack \
-        activesupport \
         puppetlabs_spec_helper
