@@ -1,10 +1,33 @@
-FROM centos:6
-MAINTAINER Nick Hilhorst <nick.hilhorst@asr.nl>
+FROM alpine
+MAINTAINER Mark Overduin <mark.overduin@asr.nl>
 
-RUN rpm -U https://yum.puppetlabs.com/puppetlabs-release-pc1-el-6.noarch.rpm
-RUN yum update -y -q && \
-    yum install -y -q ruby rubygems puppet-agent git
-RUN gem install puppet-lint
-RUN /opt/puppetlabs/puppet/bin/gem install rspec-puppet
-RUN /opt/puppetlabs/puppet/bin/gem install puppetlabs_spec_helper
-RUN gem install yaml-lint
+RUN apk add --update \
+        zlib \
+        zlib-dev \
+        alpine-sdk \
+        libxslt-dev \
+        libxml2-dev \
+        ca-certificates \
+        pciutils \
+        ruby \
+        ruby-dev \
+        ruby-irb \
+        ruby-rdoc \
+        git \
+        && \
+    echo http://dl-4.alpinelinux.org/alpine/edge/community/ >> /etc/apk/repositories && \
+    apk add --update shadow && \
+    rm -rf /var/cache/apk/*
+
+RUN gem install --minimal-deps --no-ri --no-rdoc \
+        actionpack:4.2.7.1 \
+        activesupport:4.2.7.1 \
+        puppet:4.10.1 \
+        facter:2.4.6 \
+        yaml-lint \
+        puppet-lint \
+        rails-erb-check \
+        rails-erb-lint \
+        ruby-lint \
+        rspec-puppet \
+        puppetlabs_spec_helper
