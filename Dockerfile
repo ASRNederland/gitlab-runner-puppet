@@ -12,7 +12,7 @@ RUN yum update -y && \
         zlib-devel \
         libxslt-devel \
         libxml2-devel \
-        puppet-agent-1.7.1-1.el7 \
+        puppet-agent-1.10.5-1.el7 \
         git
 #RUN /opt/puppetlabs/puppet/bin/gem install --minimal-deps --no-ri --no-rdoc \
 
