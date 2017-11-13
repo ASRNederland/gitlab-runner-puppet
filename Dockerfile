@@ -25,4 +25,4 @@ RUN gem install --minimal-deps --no-ri --no-rdoc \
         rails-erb-lint \
         ruby-lint \
         rspec-puppet \
-        puppetlabs_spec_helper
+        puppetlabs_spec_helper:2.3.2
