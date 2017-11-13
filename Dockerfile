@@ -16,7 +16,7 @@ RUN yum -y install https://yum.puppetlabs.com/puppetlabs-release-pc1-el-7.noarch
         git && \
     yum clean all
 
-RUN gem install actionpack:4.2.7.1 activesupport:4.2.7.1 --no-ri --no-rdoc
+RUN gem install actionpack:4.2.7.1 activesupport:4.2.7.1 nokogiri:1.6.8.1 --no-ri --no-rdoc
 
 RUN gem install --minimal-deps --no-ri --no-rdoc \
         yaml-lint \
