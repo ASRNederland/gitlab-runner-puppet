@@ -15,14 +15,7 @@ RUN yum -y install https://yum.puppetlabs.com/puppet/puppet-release-el-7.noarch.
         puppet-agent-5.3.3-1.el7 \
         git && \
     yum clean all
-
-RUN gem install nokogiri:1.6.8.1 --no-ri --no-rdoc && gem install actionpack:4.2.7.1 activesupport:4.2.7.1 --no-ri --no-rdoc
-
-RUN gem install --minimal-deps --no-ri --no-rdoc \
-        yaml-lint \
-        puppet-lint \
-        rails-erb-check \
-        rails-erb-lint \
-        ruby-lint \
-        rspec-puppet \
-        puppetlabs_spec_helper
+    
+COPY Gemfile /root/
+    
+RUN gem install -g /root/Gemfile --no-ri --no-rdoc
