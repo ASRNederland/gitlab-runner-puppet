@@ -2,7 +2,7 @@ FROM centos:7
 MAINTAINER Nick Hilhorst <nick.hilhorst@asr.nl>
 
 ENV PATH="/opt/puppetlabs/puppet/bin:${PATH}"
-RUN yum -y install https://yum.puppetlabs.com/puppet/puppet-release-el-7.noarch.rpm && \
+RUN yum -y install https://yum.puppetlabs.com/puppetlabs-release-pc1-el-7.noarch.rpmm && \
     yum update -y && \
     yum install -y \
         gcc \
@@ -12,7 +12,7 @@ RUN yum -y install https://yum.puppetlabs.com/puppet/puppet-release-el-7.noarch.
         zlib-devel \
         libxslt-devel \
         libxml2-devel \
-        puppet-agent-5.3.3-1.el7 \
+        puppet-agent-1.10.5-1.el7 \
         git && \
     yum clean all
     
@@ -24,6 +24,5 @@ RUN gem install --minimal-deps --no-ri --no-rdoc \
         rails-erb-check \
         rails-erb-lint \
         ruby-lint \
-        rspec:3.6.0 \
         rspec-puppet \
         puppetlabs_spec_helper
