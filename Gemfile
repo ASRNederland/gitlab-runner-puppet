@@ -34,7 +34,7 @@ gem 'rack-cache', '1.7.0'
 gem 'activesupport', '3.2.22.5'
 gem 'activemodel', '3.2.22.5'
 gem 'actionpack', '3.2.22.5'
-gem 'rails-erb', 'check-0.1.0'
+gem 'rails-erb-check', '0.1.0'
 
 gem 'rainbow', '2.2.2'
 gem 'gli', '2.16.1'
