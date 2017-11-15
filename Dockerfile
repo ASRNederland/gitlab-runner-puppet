@@ -2,7 +2,7 @@ FROM centos:7
 MAINTAINER Nick Hilhorst <nick.hilhorst@asr.nl>
 
 ENV PATH="/opt/puppetlabs/puppet/bin:${PATH}"
-RUN yum -y install https://yum.puppetlabs.com/puppetlabs-release-pc1-el-7.noarch.rpm && \
+RUN yum -y https://yum.puppetlabs.com/puppet5/puppet-release-el-7.noarch.rpm && \
     yum update -y && \
     yum install -y \
         gcc \
@@ -12,10 +12,10 @@ RUN yum -y install https://yum.puppetlabs.com/puppetlabs-release-pc1-el-7.noarch
         zlib-devel \
         libxslt-devel \
         libxml2-devel \
-        puppet-agent-1.10.5-1.el7 \
+        puppet-agent-5.3.3-1.el7 \
         git && \
     yum clean all
-    
+
 RUN gem install actionpack:4.2.7.1 activesupport:4.2.7.1 --no-ri --no-rdoc
 
 RUN gem install --minimal-deps --no-ri --no-rdoc \
