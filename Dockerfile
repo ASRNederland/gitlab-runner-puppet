@@ -12,7 +12,7 @@ RUN yum install -y https://yum.puppetlabs.com/puppet5/puppet-release-el-7.noarch
         zlib-devel \
         libxslt-devel \
         libxml2-devel \
-        puppet-agent-5.3.3-1.el7 \
+        puppet-agent-5.5.6-1.el7 \
         git && \
     yum clean all
 
