@@ -2,7 +2,7 @@ FROM centos:7
 MAINTAINER Nick Hilhorst <nick.hilhorst@asr.nl>
 
 ENV PATH="/opt/puppetlabs/puppet/bin:${PATH}"
-RUN yum install -y https://yum.puppetlabs.com/puppet5/puppet-release-el-7.noarch.rpm && \
+RUN yum install -y https://yum.puppetlabs.com/puppet5/puppet5-release-el-7.noarch.rpm && \
     yum update -y && \
     yum install -y \
         gcc \
